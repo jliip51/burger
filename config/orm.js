@@ -1,8 +1,8 @@
 var connection = require('./connection.js');
 
-var orms = {
+var orm = {
   selectAll: function(tableName, cb) {
-  var queryString = 'Select * From ?? ;';
+  var queryString = 'SELECT * FROM ??;';
   connection.query(queryString, [tableName], function(err, data) {
     if (err) throw err;
     cb(data);
@@ -10,7 +10,7 @@ var orms = {
 },
 
   insertOne: function(tableName, column, value, cb) {
-  var queryString = 'INSERT INTO ?? (??) VALUES (?);';
+  var queryString = 'INSERT INTO ?? (??) VALUES (?)';
   console.log(queryString);
   connection.query(queryString, [tableName, column, value] , function(err, data) {
     if (err) throw err;
@@ -25,6 +25,6 @@ var orms = {
 //     cb(data);
 //   });
 // }
-};
+}
 
-module.exports = orms;
+module.exports = orm;

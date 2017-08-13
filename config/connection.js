@@ -13,10 +13,12 @@ if(process.env.JAWSDB_URL){
   });
 }
 
-module.exports connection = connection.connect(function(err){
+connection.connect(function(err){
   if (err) {
     console.log('Error connecting' + err.stack);
     return;
   }
   console.log('Connected as id :' + connection.threadId);
 });
+
+module.exports = connection;

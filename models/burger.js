@@ -1,16 +1,16 @@
-var orms = require('../config/orms.js');
+var orm = require('../config/orm.js');
 
 var burgers = {
   all: function(cb) {
-    orm.selectAll('burgers', function(err, res) {
-      if (err) throw err;
+    orm.selectAll('burgers', function(res) {
       cb(res);
     });
   },
 
   create: function(value, cb) {
-    orm.insertOne('burgers', 'burger_name', value, function(err, res) {
-      if (err) throw err;
+    console.log('Value create function ' + value);
+    orm.insertOne('burgers', 'burger_name', value, function(res) {
+      console.log(res);
       cb(res);
     });
   }
