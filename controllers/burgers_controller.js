@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(req, res) {
+router.post("/add", function(req, res) {
   console.log(req.body.name);
   burgers.create(req.body.name, function(resp) {
     console.log(resp);
