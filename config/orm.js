@@ -1,24 +1,30 @@
 var connection = require('./connection.js');
 
-module.exports = {
-var selectAll = function() {
-  connection.query('Select _____', , function(err, data) {
+var orms = {
+  selectAll: function(tableName, cb) {
+  var queryString = 'Select * From ?? ;';
+  connection.query(queryString, [tableName], function(err, data) {
     if (err) throw err;
-
+    cb(data);
   });
+},
+
+  insertOne: function(tableName, column, value, cb) {
+  var queryString = 'INSERT INTO ?? (??) VALUES (?);';
+  console.log(queryString);
+  connection.query(queryString, [tableName, column, value] , function(err, data) {
+    if (err) throw err;
+    cb(data);
+  });
+},
+//
+//   updateOne: function() {
+//   var queryString =
+//   connection.query(queryString, , function(err, data) {
+//     if (err) throw err;
+//     cb(data);
+//   });
+// }
 };
 
-var insertOne() = function() {
-  connection.query('Select _____', , function(err, data) {
-    if (err) throw err;
-
-  });
-};
-
-var updateOne() = function() {
-  connection.query('Select _____', , function(err, data) {
-    if (err) throw err;
-
-  });
-}
-};
+module.exports = orms;
