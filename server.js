@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 
-var port = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -18,6 +18,6 @@ var routes = require('./controllers/burgers_controller.js');
 
 app.use("/", routes);
 
-
-app.listen(port);
-console.log("Connected on port: " + port);
+app.listen(PORT, function() {
+console.log("Connected on port: " + PORT);
+});

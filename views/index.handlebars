@@ -10,10 +10,32 @@
       </div>
     </form>
   </div>
+  <div class="row">
+    <div class=col-sm-4>
+      <div class="row">
+        <h1>Burgers Ready to Consume</h1>
+
+          {{#each burger}}
+          {{#unless this.devoured}}
+          <div class="row">
+            <div class="col-sm-6 text-center">
+            <p>{{this.id}} - {{this.burger_name}}</p>
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="id" value={{this.id}}>
+             <button type="submit">Devour It!</button>
+            <form>
+            </div>
+          </div>
+          {{/unless}}
+          {{/each}}
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-<h1>Burgers Ready to Consume</h1>
 
 
 </div>
