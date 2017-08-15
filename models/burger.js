@@ -13,13 +13,14 @@ var burgers = {
       console.log(res);
       cb(res);
     });
-  }
+  },
 
-
-
-
-
-
+  update: function(objColVals, condition, cb) {
+    orm.update("burgers", objColVals, condition, function(res) {
+      console.log(res);
+      cb(res);
+    });
+  },
 };
 
 module.exports = burgers;

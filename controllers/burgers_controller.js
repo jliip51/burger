@@ -21,4 +21,12 @@ router.post("/add", function(req, res) {
   });
 });
 
+router.put("/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+  burger.update({ devoured: true }, condition, function(result) {
+  console.log(result);
+  res.redirect("/");
+  });
+});
+
 module.exports = router;

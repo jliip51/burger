@@ -3,26 +3,40 @@
     <h1 id="sign-name" class="text-center"><a href="" id="sign-glow">Eat Da' Burgers!</a></h1>
   </div>
   <div class="row">
-    <div class="col-xs-4 text-center">
-      <h2 id="ready-to-eat">Ready For Eatin'</h2>
+    <div class="col-xs-5 text-center">
+      <h2 id="ready-to-eat">Hot Off Da' Grill</h2>
       {{#each burger}}
         {{#unless this.devoured}}
             <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
-              <label id="ready items">{{this.burger_name}}</label>
+              <label id="ready-items">{{this.burger_name}}</label>
               <input type="hidden" name="id" value={{this.id}}>
-             <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">Devour It!</button>
+             <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">
+               <span class="glyphicon glyphicon-triangle-left"></span> Devour!</button>
            </form>
           {{/unless}}
           {{/each}}
     </div>
-    <div class="col-xs-4 text-center">
+    <div class="col-xs-2 text-center" id="add-form">
     <form action="/add" method="POST">
       <div class="form-group">
         <label for="new-burger" class="control-label">Create A New Burger</label>
         <input class="form-control" type="text" id="new-burger" name="name" value="" placeholder="Add New Burger Name">
-        <button type="submit" class="btn btn-warning">Add Burger</button>
+        <button type="submit" class="btn btn-warning btn-block" id="add-btn">Add Burger</button>
       </div>
     </form>
+  </div>
+  <div class="col-xs-5 text-center">
+    <h2 id="ready-to-eat">Burger Heaven</h2>
+    {{#each burger}}
+      {{#if this.devoured}}
+          <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
+            <label id="ready-items">{{this.burger_name}}</label>
+            <input type="hidden" name="id" value={{this.id}}>
+           <button type="submit" class="btn btn-sm btn-primary" id="eat-btn">
+             <span class="glyphicon glyphicon-triangle-left"></span> RE-N-CARN-ATE  !</button>
+         </form>
+        {{/if}}
+        {{/each}}
   </div>
   </div>
 </div>

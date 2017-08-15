@@ -18,21 +18,33 @@ h2#ready-to-eat {
 }
 
 #ready-items {
-  border: solid red 1px;
-}
-
-#ready-items p {
-  /*width: 70%;*/
+  width: 60%;
+  padding: 5px;
   font-family: 'Cherry Cream Soda';
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
-  /*display: inline;*/
   border: solid yellow 1px;
+  border-radius: 10px;
 }
 
 #eat-btn {
-  /*float: right;*/
-  border: solid green 1px;
+  margin-left: 10px;
+}
+
+#add-form {
+  margin-top: 50px;
+}
+
+#add-form label {
+  font-size: 18px;
+  color: #FF1177;
+  text-shadow: 0 0 40px #FF1177;
+}
+
+#add-btn {
+  font-size: 18px;
+  font-family: 'Cherry Cream Soda';
+  margin-top: 10px;
 }
 
 #sign-glow {
