@@ -1,3 +1,98 @@
 body {
-  background-color: yellow;
+  background-image: url('/assets/images/background.png');
+}
+
+.jumbotron {
+  margin-top: 20px;
+  background-color: black;
+  border-radius: 40% !important;
+  border: double 10px !important;
+  border-color: #FF0000 !important;
+  box-shadow: 0 0 70px #FF1177;
+}
+
+h2#ready-to-eat {
+  font-family: 'Cherry Cream Soda';
+  color: #228DFF;
+  text-shadow: 0 0 40px #228DFF;
+}
+
+#ready-items {
+  border: solid red 1px;
+}
+
+#ready-items p {
+  /*width: 70%;*/
+  font-family: 'Cherry Cream Soda';
+  font-size: 24px;
+  color: #fff;
+  /*display: inline;*/
+  border: solid yellow 1px;
+}
+
+#eat-btn {
+  /*float: right;*/
+  border: solid green 1px;
+}
+
+#sign-glow {
+  font-size: 100px;
+  font-family: 'Cherry Cream Soda';
+  color: #00FF00;
+}
+
+h1#sign-name {
+  text-align: center;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
+}
+
+a#sign-glow {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1#sign-name a {
+  color: #FFDD1B;
+  font-family: 'Cherry Cream Soda';
+}
+
+h1#sign-name a:hover {
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+h1#sign-name a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
 }

@@ -1,41 +1,28 @@
 <div class="container-fluid">
   <div class="jumbotron">
-    <h1 class="text-center">Eat Da' Burgers!</h1>
-    <br>
-    <form class="add-new-form" action="/add" method="POST">
+    <h1 id="sign-name" class="text-center"><a href="" id="sign-glow">Eat Da' Burgers!</a></h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 text-center">
+      <h2 id="ready-to-eat">Ready For Eatin'</h2>
+      {{#each burger}}
+        {{#unless this.devoured}}
+            <form class="form-inline" action="/{{this.id}}?_method=PUT" method="POST">
+              <label id="ready items">{{this.burger_name}}</label>
+              <input type="hidden" name="id" value={{this.id}}>
+             <button type="submit" class="btn btn-sm btn-danger" id="eat-btn">Devour It!</button>
+           </form>
+          {{/unless}}
+          {{/each}}
+    </div>
+    <div class="col-xs-4 text-center">
+    <form action="/add" method="POST">
       <div class="form-group">
-        <label for="new-burger">Design An New Burger Here</label>
-        <input type="text" id="new-burger" name="name" value="" placeholder="Add New Burger Name">
-        <button type="submit">Add Burger</button>
+        <label for="new-burger" class="control-label">Create A New Burger</label>
+        <input class="form-control" type="text" id="new-burger" name="name" value="" placeholder="Add New Burger Name">
+        <button type="submit" class="btn btn-warning">Add Burger</button>
       </div>
     </form>
   </div>
-  <div class="row">
-    <div class=col-sm-4>
-      <div class="row">
-        <h1>Burgers Ready to Consume</h1>
-
-          {{#each burger}}
-          {{#unless this.devoured}}
-          <div class="row">
-            <div class="col-sm-6 text-center">
-            <p>{{this.id}} - {{this.burger_name}}</p>
-            <form action="/{{this.id}}?_method=PUT" method="POST">
-              <input type="hidden" name="id" value={{this.id}}>
-             <button type="submit">Devour It!</button>
-            <form>
-            </div>
-          </div>
-          {{/unless}}
-          {{/each}}
-
-      </div>
-    </div>
   </div>
-</div>
-
-
-
-
-
 </div>
