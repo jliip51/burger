@@ -8,7 +8,6 @@ var burgers = {
   },
 
   create: function(value, cb) {
-    console.log('Value create function ' + value);
     orm.insertOne('burgers', 'burger_name', value, function(res) {
       console.log(res);
       cb(res);

@@ -5,8 +5,16 @@ var router = express.Router();
 
 router.get("/", function(req, res) {
   burgers.all(function(data) {
+    var eatenArray = [];
+    for (i = 0; i < data.length; i++) {
+      eatenArray.push(data[i].count_eaten);
+    }
+    function sumArr(total, num) {
+    return total + num;
+    };
     var hbsObject = {
-      burger: data
+      burger: data,
+      total: eatenArray.reduce(sumArr)
     };
     console.log(hbsObject);
     res.render("index", hbsObject);

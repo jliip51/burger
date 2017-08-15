@@ -47,6 +47,13 @@ h2#ready-to-eat {
   margin-top: 10px;
 }
 
+#total {
+  font-size: 18px;
+  font-family: 'Cherry Cream Soda';
+  color: #fff;
+  text-shadow: 0 0 10px;
+}
+
 #sign-glow {
   font-size: 100px;
   font-family: 'Cherry Cream Soda';
@@ -108,3 +115,15 @@ h1#sign-name a:hover {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
   }
 }
+
+/*@media (min-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 990px;
+  }
+}*/

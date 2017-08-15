@@ -24,14 +24,6 @@ update: function(table, id, devoured, cb) {
   } else {
     queryString = "UPDATE ?? SET devoured=false WHERE id=?";
   }
-  // var queryString = "UPDATE " + table;
-  //
-  // queryString += " SET ";
-  // queryString += objToSql(objColVals);
-  // queryString += " WHERE ";
-  // queryString += condition;
-  //
-  // console.log(queryString);
   connection.query(queryString, [table, id], function(err, data) {
     if (err) throw err;
     cb(data);
