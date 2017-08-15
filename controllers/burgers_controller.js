@@ -22,8 +22,8 @@ router.post("/add", function(req, res) {
 });
 
 router.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-  burger.update({ devoured: true }, condition, function(result) {
+  // var condition = "id = " + req.params.id;
+  burgers.update(req.params.id, req.body.devoured, function(result) {
   console.log(result);
   res.redirect("/");
   });
