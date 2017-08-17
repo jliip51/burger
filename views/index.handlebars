@@ -24,6 +24,9 @@
         <button type="submit" class="btn btn-warning btn-block" id="add-btn">Add Burger</button>
       </div>
     </form>
+    {{#if alert}}
+    <p style="color: red">{{alert}}</p>
+    {{/if}}
     <div>
     <h3 id="total">Total Burgers Devoured: {{total}}</h3>
   </div>
